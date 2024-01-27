@@ -1,0 +1,59 @@
+Scrapped CSS Grid Templates:
+
+.gallerygrid-one{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "a b c c"
+        "a b d d";
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: auto;
+
+    
+}
+
+#galleryimg:nth-child(1){
+    grid-area: a;
+}
+
+#galleryimg:nth-child(2){
+    grid-area: b;
+}
+
+#galleryimg:nth-child(3){
+    grid-area: c;
+}
+
+
+
+.gallerygrid-two{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+       "a a  c c "
+       "b b  c c";
+    grid-template-columns: repeat(4, 320px);
+    grid-template-rows: 300px;
+    
+    
+
+    
+}
+
+
+
+#galleryimg-two:nth-child(1){
+    grid-area: a;
+
+}
+#galleryimg-two:nth-child(2){
+    grid-area: b;
+
+}
+#galleryimg-two:nth-child(3){
+    grid-area: c; 
+}
