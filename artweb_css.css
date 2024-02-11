@@ -5,28 +5,28 @@
    margin: 0;
    padding: 0;
    
+   
 }
+
+
+@media only screen and (min-width: 340px) {
+    
+}
+/* ------------------------------------------------- */
 
 
 div.banner{
-    background-color: rgb(32, 31, 31);
-    height: 90px;
+    background-color:  rgb(30, 30, 30);
+    height: 5em;
     display: flex;
     text-align: left;
-   
     padding-left: 10px;
     min-width: 50%
-   
 }
 
 .banner h1{
-    position:static;
-   
-    
-    transform: translate(-50% -50%);
     color: rgb(55, 197, 244);
-  
-    padding-top: 10px;
+    padding-top: 0.5em;
     padding-left: 10px
     
 }
@@ -36,8 +36,8 @@ div.banner{
     text-align: center;
     display: flex;
     color: white;
-    margin-left: auto;
-    padding: 25px;
+    float: right;
+    padding: 1.5em 25px 25px 25px;
    
     /* font-weight: bold; */
    
@@ -57,7 +57,385 @@ div.banner{
     /* background-color: rgb(77, 75, 75); */
    
 }
-/*  */
+.hero{
+    
+    background-image: url("Paintings/herobg.jpg");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    height: 110sv;
+   
+    background-color: rgb(30, 30, 30);
+}
+
+.hero-content{
+    display: grid;
+   
+   overflow: hidden;
+   
+    background-size: cover;
+    color: black;
+    font-family: Abel;
+    font-size: 15px;
+   
+    align-items: center;
+    width: 40em;
+    height: 110svh;
+    
+}
+
+.hero-content-inner{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 4px;
+    position: absolute;
+    top: 40%;
+    width: 35em;
+    padding: 0 30px;
+   
+}
+
+#curve2{
+    visibility: hidden;
+   
+}
+
+#curve3{
+   visibility: hidden;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#white:visited{
+    color: white;
+}
+
+#white:active{
+    color: white;
+}
+
+.intro{
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 42em;
+    background: url("Paintings/banner.png");
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+}
+.introtext h1{
+
+    font-size: 90px;
+  
+    
+}
+.introtext{
+    
+    position: absolute;
+   
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    padding-top: 1em;
+    height: 18em;
+    
+   
+    /* Make it so that u cant scroll too much and about me stays at center */
+}
+/* 
+.header{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    float: left;
+    background-color: #7c7c7c;
+    color: rgb(255, 255, 255);
+    width: 15em;
+    z-index: 10;
+} */
+
+.paragraph{
+    background-color: rgb(30, 30, 30);
+    padding: 0 2em 1em 2em;
+    height: 19em;
+    width: 13em;
+}
+
+.rectangle{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    left: 47%;
+    height: 35rem;
+    width: 25rem;
+    border: 9px solid rgb(255, 255, 255);
+    z-index: -1;
+}
+
+
+#bgimg{
+    width: 100%;
+    height: 400px;
+}
+
+
+
+.gallery{
+    
+    background-color: #dbdbdb;
+    overflow: hidden;
+   
+    font-size: 20px;
+  
+}
+.gallery-transition-curve {
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.gallery-transition-curve svg {
+    position: relative;
+    display: block;
+    width: calc(158% + 1.3px);
+    height: 71px;
+}
+
+.gallery-transition-curve .shape-fill {
+    fill: #DBDBDB;
+}
+/* To be used when you haven't photoshopped the image. */
+/* .toobig{
+    height: 100%;
+    width: 100%
+   
+}
+.toobigcantfixthat{
+    width: 80%;
+    height: 100%;
+} */
+@media screen and (min-width: 320px){
+
+    .item-tall{
+        grid-row: span 2 /auto;
+    }
+    
+    .item-wide{
+        grid-column: span 2 / auto;
+    }
+    }
+
+.gallerygrid{
+   
+    overflow: hidden;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "a a c"
+    "b b c"
+    "d d f"
+    "e e g";
+    grid-template-columns: repeat(auto-fit, minmax(min(250px,100%)), 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 2em
+
+    
+
+}
+/* @media screen and (max-width: 720px){
+    .gallerygrid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit minmax(20px, 1fr));
+        grid-template-rows: auto;
+    }
+} */
+#galleryimg{
+    width: 100%;
+}
+#galleryimg:nth-child(1){
+    grid-area: a
+}
+#galleryimg:nth-child(2){
+    grid-area: b
+}
+#galleryimg:nth-child(3){
+    grid-area: c
+}
+#galleryimg:nth-child(4){
+    grid-area: d
+}
+#galleryimg:nth-child(5){
+    grid-area: e
+}
+#galleryimg:nth-child(6){
+    grid-area: f
+}
+#galleryimg:nth-child(7){
+    grid-area: g;
+}
+
+.contactinfo{
+    display: flex;
+    color: white;
+    background-color: black;
+    height: 6em;
+    padding-top: 2em;
+    font-size: 20px;
+    justify-content: center;
+    z-index: 1;
+   
+}
+
+@media screen and (max-width: 800px){
+.contactinfo-contents{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+}
+.contactinfo-contents{
+   
+
+    display: flex;
+   
+        
+    
+    flex-direction: row;
+
+    color: white;
+    height: 15em;
+    justify-content: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    
+    /* z-index: -1 */
+}
+
+#content1{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 3em;
+    height: 25rem;
+    background-color: #01bed7;
+    width: 34%
+}
+
+#content2{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 25rem;
+    background-color: rgb(45, 45, 45);
+    width: 34%;
+    padding: 3em;
+}
+
+#content3{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 25rem;
+    background-color: #ff8147;
+    width: 34%;
+    padding: 3em;
+}
+
+#content4{
+    padding-top: 5rem;
+}
+#content1:hover{
+    background: url(Paintings/paintingbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    color: white;
+}
+#content2:hover{
+    background: url(Paintings/sketchbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    color: white;
+}
+
+#content3:hover{
+    background: url(Paintings/origamibg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    color: white;
+}
+
+#black{
+    color: black;
+    text-decoration: underline;
+}
+
+#more{
+    height: 3em;
+    width: 10em;
+    font-size: 20px;
+    border-radius: 0;
+    border-style: none;
+    margin: 2em 0 2em 0;
+}
+
+.gallerygrid-2{
+  
+    display: none;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a a "
+    "b b "
+    "c c "
+    "d d ";
+    padding: 2em;
+    
+}
+
+#galleryimg_alt{
+    width: 100%;
+   
+}
+
+#galleryimg_alt:nth-child(1){
+    grid-area: a
+}
+#galleryimg_alt:nth-child(2){
+    grid-area: b
+}
+#galleryimg_alt:nth-child(3){
+    grid-area: c
+}
+#galleryimg_alt:nth-child(4){
+    grid-area: d
+}
+
+/* This is the code of Shop page  */
 
 .container{
     position: relative;
@@ -106,11 +484,10 @@ div.banner{
 
 .popup{
     position: absolute;
-    display: none;
-    height: 500px;
-    width: 100%;
+    display: none;  
+    top: 20%;
+    bottom:20%;
     background-color: white;
-    
 }
 
 #popup1{
@@ -122,8 +499,7 @@ div.banner{
     position: static;
     padding: 40px 20px;
     float: left;
-    width: 60%;
-    height: 80%;
+    
 }
 #overlay{
     position: absolute;
@@ -157,127 +533,51 @@ ul{
     float: left;
     text-align: left;
 }
-a{
-    text-decoration: none;
-}
 
-a:visited{
-    color: white;
-}
-
-.intro{
-    overflow: scroll;
-    width: 100%;
-    height: 400px;
-    background: url("Paintings/banner.png");
-    background-size: cover;
-    position: relative;
-}
-.introtext h1{
-    font-size: 90px;
-    overflow: scroll;
+/* End of Shop page CSS */
+/* Contact Page */
+.header{
     
+    color: black;
+    justify-content: start;
 }
-.introtext{
-    
-    color: white;
+.contact{
     font-size: 30px;
-    left:50%;
-    transform: translate(-50%);
-    position: absolute;
-    min-width: 50px;
 }
 
-.introtext p {
-    overflow: scroll;
-}
-#bgimg{
-    width: 100%;
-    height: 400px;
-}
-/* THIS IS USIN THE PHOTO GALLERY METHOD (BORING AND UGLY)
-.gallery {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: 450px
-    
-}
-*/
-
-
-
-/* TO FIX GAP ISSUE, VERTICAL FILE'S BACKGROUND SHOULD BE REDUCED IN PHOTOSHOP */
-
-/* .gallery h1{
-    border-bottom: 1px solid ;
-    
-    text-align: center;
-    width: 50%;
-    transform: translate(50%);
+.contact_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-} */
-
-.gallery{
-    overflow: hidden;
- 
-}
-
-
-.toobig{
-    height: 100%;
-    width: 100%
    
-}
-
-@media screen and (min-width: 320px){
-
-    .item-tall{
-        grid-row: span 2 /auto;
-    }
     
-    .item-wide{
-        grid-column: span 2 / auto;
-    }
-    }
-
-.gallerygrid{
-    display: grid;
-    gap: 1rem;
-    grid-template-areas: 
-    "a a c"
-    "b b c"
-    "d d f"
-    "e e f";
-    grid-template-columns: repeat(2, 350px);
-    grid-template-rows: auto;
+  
+}
+.facebook{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    
+    align-items: center;
+    padding: 1em 0 0 1em;
+}
 
+.gmail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 0 1em;
 }
-/* @media screen and (max-width: 720px){
-    .gallerygrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit minmax(20px, 1fr));
-        grid-template-rows: auto;
-    }
-} */
 
-#galleryimg:nth-child(1){
-    grid-area: a
+.instagram{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 0 1em;
 }
-#galleryimg:nth-child(2){
-    grid-area: b
-}
-#galleryimg:nth-child(3){
-    grid-area: c
-}
-#galleryimg:nth-child(4){
-    grid-area: d
-}
-#galleryimg:nth-child(5){
-    grid-area: e
-}
-#galleryimg:nth-child(6){
-    grid-area: f
+
+#logo {
+    padding-right: 1rem;
 }
