@@ -5,109 +5,69 @@
     <meta charset="UTF-8" />
     <title>Anandshree Arts</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js" type=""></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Abel|Protest+Revolution" rel="stylesheet">
     <link href="artweb_css.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- <div class="banner">
-        <h1> Anandshree Art Gallery </h1> -->
-
-
-    <!-- <div class="menu">
-                <ul><a id = "white" href = "Anandshree Arts_Home.html">Home</a> </ul>
-                <ul><a id = "white"  href = "Anandshree Arts_Shop.html">Shop</a></ul>
-                <ul><a id = "white"  href = "AnandShree Arts_Contact.html">Contact</a></ul>
-            </div> -->
-    </div>
+    
 
     <div class="hero">
-        <div class="menu">
+        <div class="menu" id = "hero">
             <ul><a href="Anandshree Arts_Home.html">Home</a> </ul>
+            <ul><a href="Anandshree Arts_Gallery.html">Gallery</a></ul>
             <ul><a href="Anandshree Arts_Shop.html">Shop</a></ul>
             <ul><a href="AnandShree Arts_Contact.html">Contact</a></ul>
-        </div>
-        <div class="hero-content">
-            <svg id="visual" viewBox="0 0 800 900" width="800" height="900" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                <path id = "curve1" d="M560 0L560 37.5C560 75 560 150 551.8 225C543.7 300 527.3 375 519.3 450C511.3 525 511.7 600 521.2 675C530.7 750 549.3 825 558.7 862.5L568 900L0 900L0 862.5C0 825 0 750 0 675C0 600 0 525 0 450C0 375 0 300 0 225C0 150 0 75 0 37.5L0 0Z" fill="#ccd8d8" stroke-linecap="round" stroke-linejoin="miter">
-                </path>
-                <path id = "curve2" d="M523 0L536.5 37.5C550 75 577 150 588.2 225C599.3 300 594.7 375 582.3 450C570 525 550 600 538.3 675C526.7 750 523.3 825 521.7 862.5L520 900L0 900L0 862.5C0 825 0 750 0 675C0 600 0 525 0 450C0 375 0 300 0 225C0 150 0 75 0 37.5L0 0Z" fill="#ccd8d8" stroke-linecap="round" stroke-linejoin="miter"></path>
+            
+    </div>
 
-              
-            </svg>
-
-        </div>
-        <div class="hero-content-inner">
+    <div class="hero-content">
+    
+    <div class="hero-content-inner hidden">
             <h1>Ananda Kumar Shrestha</h1>
-            <br>
+          
 
-            <span style = "width: 30%; border-bottom: 2px solid; margin-bottom: 20px;"> PROFESSIONAL ARTIST</span>
-            <span style = "font-size: 19px; ;"> Capturing the ecstacy of Mother Nepal in a canvas! </span>
-
-        </div>
-
-        <div class="gallery-transition-curve">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
+            <span style = "width: 40%; border-bottom: 2px solid; margin-bottom: 20px; "> PROFESSIONAL ARTIST</span>
+            <span style = "font-size: 20px; padding: 0;"> Capturing the ecstacy of Mother Nepal in a canvas. </span>
+            <button id = "major"> <a href = "Anandshree Arts_Gallery.html">Explore now! </a> </button>
+    </div>
     </div>
 
 
-    <!-- <div class = "intro">
-        <div class = "introtext">
-             <div class = "header"> <h1>About Me </h1>  </div>
-                <div class = "paragraph">
-                    <h1> About me</h1>
-                    <p> Hello to all, I am Ananda Kumar Shrestha. A professional artist capturing the ecstacy of Mother Nepal in a canvas!</p> 
-                </div>
-              
-        </div>
-        <div class = "rectangle"></div> -->
-
 
     </div>
-    <div class=gallery>
+    <div class="aboutme ">
+        <h1 style = "letter-spacing: 5px;">ABOUT ME</h1>
+
+        <div class="aboutme-content hidden"> 
+            Hello, I am Ananda Kumar Shrestha, a self-taught artist who finds peace in painting. I specialize in Acrylic colors but 
+            my skills do not lack 
+            in the other aspects of art. I've worked with countless clients to tailor them a piece of their liking and delivering 
+            something they would be proud to hang on their walls. </div>
+            <span style = " position: absolute; left: 10%; padding-top: 3em; font-size: 60px; font-family:fantasy; color: rgb(82, 80, 80)">❝</span>
+        <div class="aboutme-promo hidden">
+            If you have an empty wall, why not decorate it with an elegant artwork that will certainly be a conversation starter.
+            Your satisfaction is my gratification.
+        </div>
         
-        <h1>Gallery</h1>
-        <div class="gallerygrid">
-            <img src="Paintings/1.jpg" id="galleryimg" class="item-wide toobig">
-            <img src="Paintings/2.jpg" id="galleryimg" class="">
-            <img src="Paintings/vert2.png" id="galleryimg" class="item-tall vertical">
-            <img src="Paintings/q.jpg" id="galleryimg" class="item-wide ">
-            <img src="Paintings/e.jpg" id="galleryimg" class="toobig">
-            <img src="Paintings/3.png" id="galleryimg" class="vertical">
-            <img src="Paintings/aqw.jpg" id="galleryimg" class="toobigcantfixthat">
-
-
-        </div>
-        <button id="more">Load more ↓↑</button>
-        <div class="gallerygrid-2" id="gallery_Alt">
-            <img src="Paintings/Untitled.jpg" id="galleryimg_alt" class="toobig">
-            <img src="Paintings/s.jpg" id="galleryimg_alt" class="toobig">
-            <img src="Paintings/e.jpg" id="galleryimg_alt" class="toobig">
-            <img src="Paintings/scenery.jpg" id="galleryimg_alt">
-
-
-
-        </div>
-
     </div>
-    <div class="contactinfo">
-        <h1>What we do</h1>
+
+   
+    <div class="contactinfo ">
+        <h1 class = hidden>What we do</h1>
     </div>
-    <div class="contactinfo-contents">
-        <div id="content1">
+    <div class="contactinfo-contents ">
+        <div class = "slide-in" id="content1">
             <h2> Painting </h2>
             Employing my colors meticulously on the canvas to create a new masterpiece is my vocation.
         </div>
-        <div id="content2">
+        <div class = "slide-in" id="content2">
             <h2> Sketching </h2>
             Using delicate strokes of graphite, memories, ideas and moments can be captured in a monochrome tone.
         </div>
-        <div id="content3">
+        <div class = "slide-in" id="content3">
             <h2> Origami </h2>
             Utilizing the transformative property of paper, each fold unfolds the final product.
         </div>
@@ -120,16 +80,7 @@
 
     <script src="artweb.js"></script>
 
-    <script>
-        const tween = KUTE.fromTo(
-            '#curve1',
-            { path: '#curve1' },
-            { path: '#curve2'},
-           
-            { repeat: 999, duration: 1500,  yoyo: true }
-        ).start();
-
-    </script>
+   
 </body>
 
 </html>
