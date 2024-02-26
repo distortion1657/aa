@@ -3,62 +3,90 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
-    <meta charset="UTF-8" />
     <title>Anandshree Arts</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js" type=""></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Abel|Protest+Revolution" rel="stylesheet">
     <link href="artweb_css.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="banner">
-        <h1> Anandshree Art Gallery </h1>
-        <!--  -->
-
-        <div class="menu">
-            <ul><a id="white" href="Anandshree Arts_Home.html">Home</a> </ul>
-            <ul><a id="white" href="Anandshree Arts_Shop.html">Shop</a></ul>
-            <ul><a id="white" href="AnandShree Arts_Contact.html">Contact</a></ul>
-        </div>
-    </div>
-
     <div class="hero">
-        <div class="hero-content">
-            <svg id="svg" viewBox="" width="1000" height="600" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                <path id="curve"
-                    d="M490 0L518.7 14.3C547.3 28.7 604.7 57.3 595.2 85.8C585.7 114.3 509.3 142.7 509.8 171.2C510.3 199.7 587.7 228.3 623.3 257C659 285.7 653 314.3 624.5 343C596 371.7 545 400.3 509.7 428.8C474.3 457.3 454.7 485.7 424 514.2C393.3 542.7 351.7 571.3 330.8 585.7L310 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z"
-                    fill="#ffffff" stroke-linecap="round" stroke-linejoin="miter"></path>
-                <path id="curve2"
-                    d="M381 0L410.7 14.3C440.3 28.7 499.7 57.3 512.3 85.8C525 114.3 491 142.7 451.8 171.2C412.7 199.7 368.3 228.3 358.2 257C348 285.7 372 314.3 351.5 343C331 371.7 266 400.3 266.8 428.8C267.7 457.3 334.3 485.7 348 514.2C361.7 542.7 322.3 571.3 302.7 585.7L283 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z"
-                    fill="#ffffff" stroke-linecap="round" stroke-linejoin="miter"></path>
-                <path id = "curve3"
-                    d="M333 0L323.2 14.3C313.3 28.7 293.7 57.3 322.7 85.8C351.7 114.3 429.3 142.7 455.3 171.2C481.3 199.7 455.7 228.3 468.3 257C481 285.7 532 314.3 540.5 343C549 371.7 515 400.3 508.7 428.8C502.3 457.3 523.7 485.7 510.7 514.2C497.7 542.7 450.3 571.3 426.7 585.7L403 600L0 600L0 585.7C0 571.3 0 542.7 0 514.2C0 485.7 0 457.3 0 428.8C0 400.3 0 371.7 0 343C0 314.3 0 285.7 0 257C0 228.3 0 199.7 0 171.2C0 142.7 0 114.3 0 85.8C0 57.3 0 28.7 0 14.3L0 0Z"
-                    fill="#ffffff" stroke-linecap="round" stroke-linejoin="miter"></path>
-            </svg>
+        <div class="menu" id = "hero">
+            <ul><a href="index.html">Home</a> </ul>
+            <ul><a href="Anandshree Arts_Gallery.html">Gallery</a></ul>
+            <ul><a href="Anandshree Arts_Shop.html">Shop</a></ul>
+            <ul><a href="AnandShree Arts_Contact.html">Contact</a></ul>
+            
+    </div>
 
-        </div>
-        <div class="hero-content-inner">
+    <div class="hero-content">
+    
+    <div class="hero-content-inner hidden">
             <h1>Ananda Kumar Shrestha</h1>
-            Capturing the ecstacy of Mother Nepal in a canvas!
+          
 
-        </div>
+            <span style = "width: 40%; border-bottom: 2px solid; margin-bottom: 20px; "> PROFESSIONAL ARTIST</span>
+            <span style = "font-size: 20px; padding: 0;"> Capturing the ecstacy of Mother Nepal in a canvas. </span>
+            <button id = "major"> <a href = "Anandshree Arts_Gallery.html">Explore now! </a> </button>
+    </div>
+    </div>
+
 
 
     </div>
-    <script src="artweb.js" type="module"></script>
-    <script>
-        const tween = KUTE.fromTo(
-            '#curve',
-            { path: '#curve' },
-            { path: '#curve3'},
-           
-            { repeat: 999, duration: 4000,  yoyo: true }
-        ).start();
+    <div class="aboutme ">
+        <h1 style = "letter-spacing: 5px;">ABOUT ME</h1>
 
-    </script>
+        <div class="aboutme-content hidden"> 
+            Hello, I am Ananda Kumar Shrestha, a self-taught artist who finds peace in painting. I specialize in Acrylic colors but 
+            my skills do not lack 
+            in the other aspects of art. I've worked with countless clients to tailor them a piece of their liking and delivering 
+            something they would be proud to hang on their walls. </div>
+            <span style = " position: absolute; left: 10%; padding-top: 3em; font-size: 60px; font-family:fantasy; color: rgb(82, 80, 80)">❝</span>
+        <div class="aboutme-promo hidden">
+            If you have an empty wall, why not decorate it with an elegant artwork that will certainly be a conversation starter.
+            Your satisfaction is my gratification.
+        </div>
+        
+    </div>
+    <div class="reviews-container">
+        <div class="review" id = "review1">
+            <h1 style="">NAME OF THE REVIEWER</h1>
+            <section id = "line-break"> </section>
+            <section>Message</section>
+
+        </div>
+       
+    </div>
+   
+    <div class="contactinfo ">
+        <h1 class = hidden>What we do</h1>
+    </div>
+    <div class="contactinfo-contents ">
+        <div class = "slide-in" id="content1">
+            <h2> Painting </h2>
+            Employing my colors meticulously on the canvas to create a new masterpiece is my vocation.
+        </div>
+        <div class = "slide-in" id="content2">
+            <h2> Sketching </h2>
+            Using delicate strokes of graphite, memories, ideas and moments can be captured in a monochrome tone.
+        </div>
+        <div class = "slide-in" id="content3">
+            <h2> Origami </h2>
+            Utilizing the transformative property of paper, each fold unfolds the final product.
+        </div>
+    </div>
+    <div id="content4">
+        <h1> Have a commission? <a href="AnandShree Arts_Contact.html"> <span
+                    style="font-style: oblique; color:white" >Contact us</span> </a></h1>
+    </div>
+
+
+    <script src="artweb.js"></script>
+
+   
 </body>
 
 </html>
