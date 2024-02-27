@@ -38,9 +38,7 @@ hiddenElements.forEach((el) => observer.observe((el)));
 slidingElements.forEach((el) => observer.observe((el)))
 
 
-
-
-
+//Buttons
 
 
 $("button#shopitem").click(buttonOnClick);
@@ -51,16 +49,21 @@ function buttonOnClick() {
  
 };
 
+const openHamburger = document.getElementById("dropdown")
+$("button#hamburg").click(hamburgfunc);
 
 
-$("#closepopup").click(function() {
-   
-    popContent.style.display = "none"
-    overlayWithPopUp.style.display = "none"
-    closeButton.style.display = "none"
-});
+function hamburgfunc(){
+    clickcounter++
+    if(clickcounter % 2 === 0 ){
+    openHamburger.style.display = "grid"
 
-// Load More Button \\
+}else{
+    openHamburger.style.display = "none"
+}
+}
+//End of Buttons
+
 var revealImages = document.getElementById("gallery-load-more");
 var clickcounter = 0;
 
@@ -89,8 +92,33 @@ function revealGallery(){
 } 
 
 
+
+
+$("#closepopup").click(function() {
+   
+    popContent.style.display = "none"
+    overlayWithPopUp.style.display = "none"
+    closeButton.style.display = "none"
+});
+
+// Load More Button \\
+
+
+
 // Animation \\
     
-
-   
-
+function detectmob() { 
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+       return true;
+     }
+    else {
+       return false;
+     }
+   }
