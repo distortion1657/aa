@@ -17,7 +17,7 @@ h1 {
 
 
 body{
-    background-color: #303036;
+    background-color: #d2dedd
 }
 
 div.banner {
@@ -36,7 +36,22 @@ div.banner {
     
     
 }
+#fancy-apos{
+    position: absolute; 
+    left: 10%; 
+    padding-top: 3em; 
+    font-size: 60px; 
+    font-family:fantasy; 
+    color: rgb(82, 80, 80)
 
+}
+
+@media screen and (max-width: 767px){
+    #fancy-apos{
+        left: 0%;
+        padding-top: 45svh;
+    }
+}
 .menu#hero {
     
     display: flex;
@@ -90,7 +105,7 @@ div.banner {
 
 .hero {
 
-    background-image: url("Paintings/herobg.jpg");
+    background-image: url("Paintings/herobg.png");
     background-size: cover;
    
     
@@ -149,14 +164,14 @@ div.banner {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    
  
     color: white;
     align-items: center;
     background: #303036;
     padding: 20px 200px;
     font-size: 20px;
-    height: 60vh;
-    overflow: scroll;
+    height: 80vh;
     z-index: 2;
 }
 
@@ -184,6 +199,7 @@ button#major {
     background-color:  #C7D4D4;
 }
 
+
 #major:hover{
    
     background-color: #5f8fa4;
@@ -195,7 +211,10 @@ a {
     color: inherit;
     
 }
-
+ a.underline{
+    padding-bottom: 30px;
+    text-decoration: underline;
+ }
 
 .intro {
     overflow: scroll;
@@ -212,6 +231,7 @@ a {
 .review{
     position: relative;
     display: flex;
+    justify-self: start;
     align-items: center;
     flex-flow: row wrap;
     color: rgb(230, 220, 220);
@@ -221,9 +241,13 @@ a {
     text-align: start;
     height: 15svh;
     z-index: 2;
-    
+    border-bottom: 2px solid;
+    border-color: #3a3a46;
 }
 
+.review:nth-child(3){
+    border: none;
+}
 #line-break{
     flex-basis: 100%;
 }
@@ -232,7 +256,7 @@ a {
     border: none;
     display: none;
     background: none;
-
+    padding-left: 10vw;
 }
 #hamburg > i{
     font-size: 5vw;
@@ -288,7 +312,7 @@ a {
     .hero-content-inner{
         top: 15svh;
         left: 50%;
-        transform: translate(-49%);
+        transform: translate(-50%);
         font-size: 4vw;
         position: absolute;
         justify-content: center;
@@ -306,6 +330,8 @@ a {
     button#major{
         font-size: 4vw !important;
         margin-top: 4px;
+        margin-top: 30px;
+
     }
 
     .menu#hero{
@@ -451,12 +477,27 @@ a {
 
 
 @media  screen and (max-width: 767px) {
+    
     .gallerygrid{
-        grid-template-columns: auto;
-        padding: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px,100%), 1fr));
+    padding: 5px;
+    gap: 10px;
+    grid-template-areas:
+    "a" 
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
     }
     .gallerygrid-2{
-        
+        padding-bottom: 30px;
+        gap: 5px
+    }
+    #galleryimg_alt{
+        max-width: 90%;
+        max-height: 100%;
     }
 }
 .contactinfo {
@@ -567,6 +608,7 @@ a {
     z-index:-1;
 }
 #content4 {
+    background-color: #2d2d2d;
     color: white;
     padding-top: 5rem;
     
@@ -619,6 +661,17 @@ a {
     transition-delay: 200ms;
 }
 
+
+.slide-down#galleryimg_alt:nth-child(n+1){
+    transition-delay: 200ms;
+}
+.slide-down#galleryimg_alt:nth-child(n+2){
+    transition-delay: 400ms;
+}
+.slide-down#galleryimg_alt:nth-child(n+3){
+    transition-delay: 600ms;
+}
+
 #black {
     color: black;
     text-decoration: underline;
@@ -628,10 +681,17 @@ a {
     height: 3em;
     width: 10em;
     font-size: 20px;
-    border-radius: 0;
-    border-style: none;
+    border-radius: 1;
+    border-style: solid;
     margin: 2em 0 2em 0;
+    background-color: white;
 }
+
+#more:hover{
+    background-color: #303036;
+    color:white;
+}
+
 @media screen and (max-width: 767px) {
     .contactinfo-contents {
         display: grid;
@@ -639,7 +699,7 @@ a {
         width: 100%;
         overflow: hidden;
         grid-template-rows: auto;
-       
+        padding-bottom: 0;
         height: fit-content;
     }
     #content1{
@@ -691,7 +751,7 @@ a {
 .container {
     position: relative;
     display: flex;
-    width: 800px;
+    width: 100%;
     padding: 30px;
     margin-right: 50px;
     overflow: hidden;
@@ -700,16 +760,16 @@ a {
 }
 
 .content {
-    display: inline-block;
-    /* background-color: white; */
+    display: flex;
     position: relative;
     margin: 15px;
-    padding: 20px 15px 10px 22px;
-    box-sizing: border-box;
-    width: 550px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    box-sizing: content-box;
+    width: 400px;
     height: 300px;
-    text-align: left;
-    border-style: groove;
+    border-style:none;
     transition: transform .1s linear;
 }
 
@@ -717,22 +777,19 @@ a {
     transform: scale(110%);
 }
 
-#thumbnails {
-    position: relative;
-    max-width: 100%;
-    height: 80%;
-    top: 35%;
-    left: 49%;
-    transform: translate(-50%, -50%)
+.thumbnails {
+    width: 100%;
+    overflow: hidden;
+    padding: 1em;
+    
+   
+   
+    
+   
 }
 
 
 .content p {
-    position: absolute;
-    text-align: center;
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, -50%)
 }
 
 .popup {
@@ -749,7 +806,7 @@ a {
     z-index: 200;
 }
 
-#fullimg {
+.fullimg {
     position: static;
     padding: 40px 20px;
     float: left;
@@ -811,26 +868,52 @@ ul {
     }
 
 }
-/* End of Shop page CSS */
-/* Contact Page */
-.header {
-
+.notice {
+    position: absolute;
     color: black;
-    justify-content: start;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 100%;
+    font-size: 3vw;
+}
+
+@media screen and (max-width: 767px){
+    .notice{
+        font-size: 3vh;
+    }
+}
+/* End of Shop page CSS */
+
+
+/* Contact Page */
+
+
+.header {
+    color: black;
+    display: flex;
+    align-items: start;
 }
 
 .contact {
+    padding: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     font-size: 30px;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(189 205 205);
 }
 
+
 .contact_container {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: wrap column;
+    align-items: start;
     justify-content: center;
-
-
-
 }
 
 .facebook {
@@ -859,7 +942,87 @@ ul {
 
 #logo {
     padding-right: 1rem;
-
 }
 
+.contact-form-container{
+    padding: 30px;
+    font-size: 1.3vw;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: start;
+    overflow: hidden;
+
+}
+#contact-form{
+    gap: 10px;
+    display: flex;
+    flex-flow: wrap column;
+    width: 100%;
+    align-items: start;
+}
+textarea{
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+    height: 80px;
+    border-radius: 19px;
+    text-align: start;
+    padding: 4px;
+}
+
+#msg{
+    align-content: start;
+    
+    height: 200px;
+}
+
+i{
+    font-size: 50px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 767px){
+    .contact-form-container{
+    font-size: 3.3vh;
+    }
+    .contact{
+        height: 40vh;
+    }
+}
+
+.success{
+    color:rgb(37, 228, 37);
+    display: none;
+    align-self: center;
+}
+#error-5{
+    align-self: center;
+}
+.error-msg{
+    color:red; 
+    display: none;
+}
+
+.submit{
+    margin: 20px 0 0 6px;
+    font-size: 1.2vw;
+    background-color:transparent;
+    padding: 10px 30px 10px 30px;
+    border-style: solid;
+    border-radius: 3px;
+    
+}
+.submit:hover{
+    background-color: rgb(189 205 205);
+    
+}
+textarea{
+    resize:none
+}
+@media screen and (max-width: 767px){
+    .submit{
+    font-size: 2.4vh;
+    }
+}
 /* End of Contact Page */

@@ -1,50 +1,152 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Anandshree Arts</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js" type=""></script>
-        <link href="https://fonts.googleapis.com/css?family=Poppins|Abel" rel="stylesheet">
-        <link href="artweb_css.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script defer src = "artweb.js"></script>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-<body>
-    
-        <div class="banner">
-            <h1> Anandshree Art Gallery </h1>
-            
-                
-            <div class="menu">
-                <ul><a href="index.html">Home</a> </ul>
-                <ul><a href="Anandshree Arts_Gallery.html">Gallery</a></ul>
-                <ul><a href = "Anandshree Arts_Shop.html">Shop</a></ul>
-                <ul><a href = "AnandShree Arts_Contact.html">Contact</a></ul>
-    
-            </div>
-            <button id="hamburg"><i class="fa fa-bars"></i> </button>
-            <div id="dropdown">
-                <section ><a href="index.html">Home</a></section>  
-                <section ><a href="Anandshree Arts_Gallery.html">Gallery</a></section>
-                <section ><a href = "Anandshree Arts_Shop.html">Shop</a></section>
-                <section ><a href = "AnandShree Arts_Contact.html">Contact</a></section>
-              
-            </div>
-       
-        </div>
-            <div class = "contact">
-                <div class = "header">
-                  <h1 style = "">You can find us on:</h1></div>
-                <div class = "contact_container">
-                <div class = "facebook"> <img src = "Logos/fb.png" id = "logo"><a  href = "https://www.facebook.com/anandshrearts">Facebook </a></div>
-                <div class= "gmail"><img src = "Logos/gmail.png" id = "logo"> <a  href = "mailto:anandshreearts@gmail.com"> Gmail </a></div>
-                <div class="instagram"><img src="Logos/instagram.png" id = "logo"><a href=""></a>Instagram</div>
-            </div>
-        </div>
 
+<head>
+    <meta charset="UTF-8" />
+    <title>Anandshree Arts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js" type=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Abel" rel="stylesheet">
+    <link href="artweb_css.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="artweb.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="banner">
+        <h1> Anandshree Art Gallery </h1>
+
+
+        <div class="menu">
+            <ul><a href="index.html">Home</a> </ul>
+            <ul><a href="Anandshree Arts_Shop.html">Shop</a></ul>
+            <ul><a href="AnandShree Arts_Contact.html">Contact</a></ul>
+
+        </div>
+        <button id="hamburg"><i class="fa fa-bars"></i> </button>
+        <div id="dropdown">
+            <section><a href="index.html">Home</a></section>
+            <section><a href="Anandshree Arts_Shop.html">Shop</a></section>
+            <section><a href="AnandShree Arts_Contact.html">Contact</a></section>
+
+        </div>
+    </div>
+
+    <div class="contact-form-container">
+        <h1> Contact Us</h1>
+        <section class="success" id = "success-1">Your message has been sent succesfully.</section>
+        <section class="error-msg" id = "error-5">Your message could not be sent.</section>
+        <form id="contact-form" >
+            <label for="Name">Your Name:</label> <section class="error-msg" id = "error-1">Please fill this form.</section>
+            <textarea id="name" required> </textarea>
+
+            <label for="Email">Your E-mail:</label> 
+            <section class="error-msg" id = "error-2">Please fill this form.</section>
+
+            <section class="error-msg" id="error-4">Please use a valid email address.</section>
+
+            <textarea name="email" id="email" required> </textarea>
+
+            <label for="Message">Your Message:</label> <section class="error-msg" id = "error-3">Please fill this form.</section>
+            <textarea name='msg' id='msg' maxlength="500" ></textarea>
+
+            <input type="submit" value="Submit" class=" submit">
+            
+        </form>
+    </div>
+
+    <div class="contact">
+        <div class="header">
+            <h1 style="">You can find us on:</h1>
+        </div>
+        <div class="contact_container">
+            <div class="facebook"><i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/anandshrearts">
+                    Facebook </a></div>
+            <div class="gmail"> <i class="fas fa-envelope"></i> <a href="mailto:anandshreearts@gmail.com"> Gmail </a>
+            </div>
+            <div class="instagram"><i class="fab fa-instagram"></i><a href=""></a>Instagram</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "rkXEX70GivOXYp2n1",
+           });
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value.trim()
+            var email = document.getElementById("email").value.trim()
+            var msg = document.getElementById("msg").value.trim()
+            var errormsg = document.getElementsByClassName("error-msg")
+
+            var errors = [
+                {id: "name", errorId:"error-1"},
+                {id:"email", errorId:"error-2"},
+                {id:"msg", errorId:"error-3"}
+        ];
+            var isValid = true
+
+            errors.forEach(function(errors){
+                var value = document.getElementById(errors.id).value.trim()
+
+                if (value) {
+                    document.getElementById(errors.errorId).style.display = "none"
+                    isValid=true
+                }
+
+                if (!value) {
+                    document.getElementById(errors.errorId).style.display = "block";
+                    isValid = false;
+                    console.log("Error "+errors.id+" is missing");
+                }
+            })
+
+               
+            
+
+            correctFormat = /^[^\s]+@+[^\s]+.+[^\s]/
+
+            if (!correctFormat.test(email)){
+                document.getElementById("error-4").style.display = "block";
+                isValid = false;
+            }else{
+                document.getElementById("error-4").style.display = "none";
+                isValid= true;
+            }
+            
+
+            if (isValid === false){
+                    return;
+                }
+            
+            emailjs.send("service_sl2xqdh","template_wzckj3e",{
+                sender_name: name,
+                email: email,
+                message: msg
+
+        }).then(function(response){
+            document.getElementById("success-1").style.display = "flex"
+        }, function(error){
+            document.getElementById("error-5").style.display = "flex"
+
+            })
+        })
+        
+     </script>
 </body>
+
 
 </html>

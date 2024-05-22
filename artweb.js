@@ -1,20 +1,16 @@
-var popContent = document.getElementById("popup1");
-var overlayWithPopUp = document.getElementById("overlay");
-var closeButton = document.getElementById("closepopup")
 
 
 
 const hiddenElements = document.querySelectorAll(".hidden")
 const slidingElements = document.querySelectorAll(".slide-in")
 const slideDownElements = document.querySelectorAll(".slide-down")
-const config = {
-    
-    threshold: 0.3
-}
-
-const slowConfig = {
+const options = {
+    root:null,
+    rootMargin: "100px 0px",
     threshold: 1
 }
+
+
 const observer = new IntersectionObserver((entries) =>{
     entries.forEach((entry) => {
         
@@ -40,10 +36,15 @@ slidingElements.forEach((el) => observer.observe((el)))
 
 //Buttons
 
+//Shop 
+var popContent = document.querySelectorAll("#popup1");
+var overlayWithPopUp = document.querySelectorAll(".overlay");
+var closeButton = document.querySelectorAll(".closepopup")
+
 
 $("button#shopitem").click(buttonOnClick);
 function buttonOnClick() { 
-    popContent.style.display = "flex"
+    popContent[0].style.display = "flex"
     overlayWithPopUp.style.display = "block"
     closeButton.style.display = "block"
  
@@ -71,7 +72,7 @@ $("button#more").click(revealGallery);
 
 function revealGallery(){
     clickcounter++
-    if(clickcounter === 1){
+    if(clickcounter % 2 != 0 ){
     
     revealImages.style.display = "grid"
     window.scrollBy({
@@ -81,10 +82,7 @@ function revealGallery(){
     );
     }
     else{
-        window.scrollBy({
-            bottom: 400,
-            behavior: "smooth"
-        })
+      
     revealImages.style.display = "none"
     clickcounter = 0; 
 }
@@ -104,21 +102,13 @@ $("#closepopup").click(function() {
 // Load More Button \\
 
 
+document.getElementById("major").addEventListener("click", function(event){
+    window.scrollBy({
+        top: 680,
+        behavior: 'smooth'
+})
+})
+
 
 // Animation \\
     
-function detectmob() { 
-    if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    ){
-       return true;
-     }
-    else {
-       return false;
-     }
-   }
