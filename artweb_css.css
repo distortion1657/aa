@@ -228,7 +228,7 @@ a {
     z-index: 10;
 }
 
-.review{
+/* .review{
     position: relative;
     display: flex;
     justify-self: start;
@@ -247,7 +247,7 @@ a {
 
 .review:nth-child(3){
     border: none;
-}
+} */
 #line-break{
     flex-basis: 100%;
 }
